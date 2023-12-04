@@ -41,23 +41,26 @@ class TabsScreen extends StatelessWidget {
               isScrollable: true,
               labelColor: Colors.white,
               unselectedLabelColor: Colors.white38,
-              labelPadding: EdgeInsets.only(left: 20, right: 20),
+              labelPadding: EdgeInsets.only(left: 40, right: 40),
               tabs: [
                 Tab(
+                    child: Text('prueba'),
                     icon: Icon(
-                  Icons.security_outlined,
-                  size: 40,
-                )),
+                      Icons.security_outlined,
+                      size: 40,
+                    )),
                 Tab(
+                    child: Text('prueba1'),
                     icon: Icon(
-                  Icons.key_rounded,
-                  size: 40,
-                )),
+                      Icons.key_rounded,
+                      size: 40,
+                    )),
                 Tab(
+                    child: Text('prueba2'),
                     icon: Icon(
-                  Icons.lock,
-                  size: 40,
-                )),
+                      Icons.lock,
+                      size: 40,
+                    )),
               ]),
         ),
         body: TabBarView(children: [
