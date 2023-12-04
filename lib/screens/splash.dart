@@ -30,7 +30,7 @@ class LoadingPage extends StatelessWidget {
                           delay: const Duration(milliseconds: 1200),
                           duration: const Duration(milliseconds: 1000),
                           child: const Icon(
-                            Icons.music_note,
+                            Icons.hourglass_bottom_rounded,
                             size: 250,
                             color: Colors.white,
                           ),
@@ -43,7 +43,7 @@ class LoadingPage extends StatelessWidget {
                   delay: const Duration(milliseconds: 1200),
                   duration: const Duration(milliseconds: 1000),
                   child: const Text(
-                    'Tu Musica Al Instante',
+                    'App Nueva Crear',
                     style: TextStyle(fontSize: 30, color: Colors.white),
                   ),
                 )
