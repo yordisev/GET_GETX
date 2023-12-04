@@ -1,5 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:descargarmusic/screens/inicio.dart';
+import 'package:descargarmusic/screens/menu.dart';
 import 'package:flutter/material.dart';
 
 class LoadingPage extends StatelessWidget {
@@ -31,7 +32,7 @@ class LoadingPage extends StatelessWidget {
                           child: const Icon(
                             Icons.music_note,
                             size: 250,
-                            color: Colors.deepPurple,
+                            color: Colors.white,
                           ),
                         ),
                       ],
@@ -43,7 +44,7 @@ class LoadingPage extends StatelessWidget {
                   duration: const Duration(milliseconds: 1000),
                   child: const Text(
                     'Tu Musica Al Instante',
-                    style: TextStyle(fontSize: 30, color: Colors.green),
+                    style: TextStyle(fontSize: 30, color: Colors.white),
                   ),
                 )
               ],
@@ -57,7 +58,7 @@ class LoadingPage extends StatelessWidget {
 
 Future scren(BuildContext context) async {
   await Future.delayed(const Duration(milliseconds: 5000), () {
-    Route route = MaterialPageRoute(builder: (context) => InicioScreen());
+    Route route = MaterialPageRoute(builder: (context) => TabsScreen());
     Navigator.pushReplacement(context, route);
   });
 }

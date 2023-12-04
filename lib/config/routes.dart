@@ -1,5 +1,6 @@
 import 'package:descargarmusic/screens/ajustes.dart';
 import 'package:descargarmusic/screens/delegardatos.dart';
+import 'package:descargarmusic/screens/menu.dart';
 import 'package:get/get.dart';
 import 'package:descargarmusic/screens/inicio.dart';
 import 'package:descargarmusic/screens/splash.dart';
@@ -9,6 +10,10 @@ class AppRoutes {
     GetPage(
       name: '/',
       page: () => const LoadingPage(),
+    ),
+    GetPage(
+      name: '/menu',
+      page: () => TabsScreen(),
     ),
     GetPage(
       name: '/inicio',
