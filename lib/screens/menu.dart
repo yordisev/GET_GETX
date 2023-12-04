@@ -2,6 +2,7 @@ import 'package:descargarmusic/screens/ajustes.dart';
 import 'package:descargarmusic/screens/delegardatos.dart';
 import 'package:descargarmusic/shared/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class TabsScreen extends StatelessWidget {
   @override
@@ -15,22 +16,35 @@ class TabsScreen extends StatelessWidget {
             'Unlock',
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
           ),
-          // leading: IconButton(
-          //     onPressed: () async {},
-          //     icon: const Icon(
-          //       Icons.output_rounded,
-          //       size: 25,
-          //       color: Colors.white,
-          //     )),
-          // actions: [
-          //   IconButton(
-          //       onPressed: () {},
-          //       icon: const Icon(
-          //         Icons.settings,
-          //         size: 25,
-          //         color: Colors.white,
-          //       ))
-          // ],
+          leading: IconButton(
+              onPressed: () {
+                Get.changeTheme(
+                    Get.isDarkMode ? ThemeData.light() : ThemeData.dark());
+              },
+              icon: const Icon(
+                Icons.output_rounded,
+                size: 25,
+                color: Colors.white,
+              )),
+          actions: [
+            IconButton(
+                onPressed: () {
+                  // Get.to(AjustesScreen());
+                  // Get.off(AjustesScreen());
+                  // Get.offAll(AjustesScreen());
+                  // Get.toNamed('/ajustes');
+                  // Get.toNamed("/ajustes", arguments: 'ArgumentosEnviar');
+                  // Get.offAllNamed("/ajustes?device=phone&id=354&name=Enzo");
+                  // var parameters = <String, String>{"flag": "true","country": "italy",};
+                  // Get.toNamed("/ajustes/34954", parameters: parameters);
+                  Get.toNamed("/ajustes/34954");
+                },
+                icon: const Icon(
+                  Icons.settings,
+                  size: 25,
+                  color: Colors.white,
+                ))
+          ],
           backgroundColor: kDarkBlueColor,
           // centerTitle: true,
           bottom: const TabBar(
