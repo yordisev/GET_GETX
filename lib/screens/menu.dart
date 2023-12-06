@@ -1,5 +1,7 @@
 import 'package:descargarmusic/screens/ajustes.dart';
+import 'package:descargarmusic/screens/cambiaricono.dart';
 import 'package:descargarmusic/screens/delegardatos.dart';
+import 'package:descargarmusic/screens/pasar.dart';
 import 'package:descargarmusic/shared/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -8,7 +10,7 @@ class TabsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 3,
+      length: 4,
       child: Scaffold(
         appBar: AppBar(
           centerTitle: true,
@@ -75,12 +77,19 @@ class TabsScreen extends StatelessWidget {
                       Icons.lock,
                       size: 40,
                     )),
+                Tab(
+                    child: Text('Ajuste'),
+                    icon: Icon(
+                      Icons.settings_applications_outlined,
+                      size: 40,
+                    )),
               ]),
         ),
         body: TabBarView(children: [
           AwesomeView(),
           AjustesScreen(),
-          Text('pruebas'),
+          Pruebas(),
+          CambiarIcono()
         ]),
       ),
     );
